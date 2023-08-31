@@ -1,0 +1,201 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Open Sans", sans-serif, Arial, Helvetica;
+  width: 100%;
+}
+
+.container {
+  overflow: hidden;
+  margin: auto;
+  width: 100%;
+  padding: 30px;
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  /* Medium devices (landscape tablets, 768px and up) */
+  /* Large devices (laptops/desktops, 992px and up) */
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+}
+@media only screen and (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+@media only screen and (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
+}
+
+.intro {
+  height: 100vh;
+  width: 100%;
+}
+.intro__navbar {
+  background-color: rgba(31, 39, 43, 0.25);
+  position: fixed;
+  z-index: 1000;
+  position: absolute;
+  width: 100%;
+}
+.intro__navbar__content {
+  display: flex;
+  justify-content: space-between;
+}
+.intro__navbar__content__heading img {
+  max-height: 22px;
+}
+@media only screen and (max-width: 1024px) {
+  .intro__navbar__content__nav {
+    display: none;
+  }
+}
+.intro__navbar__content__nav__list {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+.intro__navbar__content__nav__list__item a {
+  color: #111;
+  text-decoration: none;
+}
+.intro__navbar__content__icons {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+@media only screen and (max-width: 480px) {
+  .intro__navbar__content__icons {
+    display: none;
+  }
+}
+.intro__main {
+  background-attachment: fixed;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-image: url(images/banner-images/banner-image-1.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+}
+@media only screen and (max-width: 470px) {
+  .intro__main {
+    background-image: none;
+  }
+}
+.intro__main__text {
+  width: 60%;
+  position: absolute;
+}
+@media only screen and (max-width: 800px) {
+  .intro__main__text {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 470px) {
+  .intro__main__text {
+    padding-top: 250px;
+  }
+}
+.intro__main__text h3 {
+  font-size: 62px;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+.intro__main__text p {
+  font-size: 18px;
+  width: 75%;
+  margin-bottom: 40px;
+}
+.intro__main__text button {
+  padding: 20px 40px;
+  color: black;
+  background: transparent;
+  font-weight: bold;
+  font-size: 16px;
+  border: 2px solid black;
+}
+.intro__main__text button:hover {
+  color: #d2b356;
+  transition: 0.5s ease;
+  border: 2px solid #d2b356;
+  cursor: pointer;
+}
+
+.about {
+  background-color: red;
+  height: 100%;
+}
+.about__content {
+  align-items: center;
+  display: flex;
+  height: 100%;
+}
+@media only screen and (max-width: 765px) {
+  .about__content {
+    flex-direction: column;
+  }
+}
+.about__content__definition h5 {
+  font-size: 14px;
+  color: #ccc;
+}
+.about__content__definition h3 {
+  font-size: 34px;
+  margin-top: 30px;
+}
+.about__content__definition p {
+  color: #9c9c9c;
+  font-size: 16px;
+  line-height: 25px;
+  margin-top: 30px;
+}
+.about__content__features__line {
+  gap: 30px;
+  display: flex;
+}
+@media only screen and (max-width: 630px) {
+  .about__content__features__line {
+    flex-direction: column;
+  }
+}
+.about__content__features__line__text i {
+  color: #d2b356;
+  font-size: 30px;
+  margin-top: 50px;
+}
+.about__content__features__line__text h5 {
+  color: #111;
+  font-size: 22px;
+  margin-top: 30px;
+}
+.about__content__features__line__text p {
+  line-height: 25px;
+  margin-top: 20px;
+  font-size: 18px;
+}
