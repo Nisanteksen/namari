@@ -12,18 +12,19 @@ body{
     font-family: 'Open Sans', sans-serif, Arial, Helvetica;
     width: 100%;
 
+
 }
 .container{
     overflow: hidden;
     margin: auto;
     width: 100%;
     padding: 30px ;
-    /* Small devices (portrait tablets and large phones, 600px and up) */
+    /* Small devices (portrait tablets and large phones, 600px and up) 
     @media only screen and (min-width: 640px) {
         max-width: 640px;
     }
     
-    /* Medium devices (landscape tablets, 768px and up) */
+    /* Medium devices (landscape tablets, 768px and up) 
     @media only screen and (min-width: 768px) {
         max-width: 768px;
     }
@@ -32,16 +33,16 @@ body{
         max-width: 1024px;
     }
     
-    /* Large devices (laptops/desktops, 992px and up) */
+    /* Large devices (laptops/desktops, 992px and up) 
     @media only screen and (min-width: 1280px) {
         max-width: 1280px;
     }
     
-    /* Extra large devices (large laptops and desktops, 1200px and up) */
+    /* Extra large devices (large laptops and desktops, 1200px and up) 
     @media only screen and (min-width: 1536px) {
         max-width: 1536px;
-    }
-    
+    } 
+    */
 }
 
 .intro{
@@ -122,7 +123,7 @@ body{
             @media only screen  and (max-width: 800px) {
                 width: 100%;
             }
-            @media only screen and (max-width: 470px) {
+            @media only screen and (max-width: 370px) {
                 padding-top: 250px;
                 
             }
@@ -163,21 +164,30 @@ body{
 }
 
 .about{
-    background-color:red;
+    background-color:white;
     //width: 100%;
-    height: 100%;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    
     
     &__content{
         align-items: center;
         display: flex;
+        justify-content: space-between;
+        
         //width: 100%;
         height: 100%;
         @media only screen and (max-width: 765px) {
             flex-direction: column;
         }
+        @media only screen and (max-width: 300px) {
+            margin-top: 150px;
+        }
+
 
         &__definition{
-            
+            margin-right: 50px;
             h5{
                 font-size: 14px;
                 color: #ccc;
@@ -218,6 +228,183 @@ body{
                         line-height: 25px;
                         margin-top: 20px;
                         font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.gallery {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+
+    &__content {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        &__item {
+            position: relative;
+            width: 400px;
+            box-sizing: border-box;
+    
+            &__img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            //object-fit: cover;
+            @media only screen and (max-width: 330px) {
+                width: 300px;
+            }
+            }
+    
+            &__overlay {
+            width: 100%;
+            height: 100%;
+            top: 0;
+            right: 0;
+            justify-content: center;
+            align-items: center;
+            color: #d2b356; 
+            transition: 0.2s;
+            transform: scale(0);
+            opacity: 0;
+            display: flex;
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.7);
+    
+            i {
+                transition: 0.2s linear;
+                cursor: pointer;
+            }
+            }
+    
+            &:hover  {
+            .gallery__content__item__overlay {
+                transform: scale(1); //important
+                opacity: 1;
+            }
+            }
+        }
+    }
+}
+
+.services{
+    min-height: 100vh;
+
+    &__content{
+        display: flex;
+        justify-content: space-between;
+        @media only screen and (max-width: 470px) {
+            flex-direction: column;
+        }
+        
+        &__testimonial{
+            //width: 30%;
+            margin-right: 60px;
+            text-align: right;
+            @media only screen and (max-width: 470px) {
+                margin-bottom: 20px;
+                text-align:left;
+            }
+            p{
+                font-size: 20px;
+
+            }
+            .customer{
+                font-size: 18px;
+                padding-top: 12px;
+            }
+        }
+        &__info{
+            //width: 30%;
+            
+            
+            h3{
+                font-size: 14px;
+                color: #ccc;
+                letter-spacing: 2px;
+                padding-bottom: 15px;
+            }
+            h2{
+                font-size: 34px;
+                padding-bottom: 40px;
+                
+            }
+            p{
+                padding-bottom: 30px;
+                font-size: 18px;
+                line-height: 150%
+            }
+            .subtitle{
+                color: #9c9c9c  ;
+            }
+            button{
+                padding: 15px 20px;
+                margin-top: 15px;
+                color: black;
+                background: transparent;
+                font-weight: bold;
+                font-size: 16px;
+                border: 3px solid black;
+
+
+                &:hover{
+                    color: #d2b356;;
+                    transition: .5s ease;
+                    border: 2px solid #d2b356;
+                    cursor: pointer;
+                }
+                i{
+
+                }
+            }
+        }
+        &__img{
+            
+            img{
+                @media only screen and(max-width: 1000px) {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+    
+
+.testimonial{
+    
+    &__content{
+        display: flex;
+        &__heading{
+
+            h3{
+
+            }
+            h2{
+
+            }
+        }
+        &__customers{
+
+            &__item{
+
+                &__img{
+
+                    img{
+
+                    }
+                }
+                &__text{
+
+                    p{
+
+                    }
+                    .name{
+
                     }
                 }
             }
